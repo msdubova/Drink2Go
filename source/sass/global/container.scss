@@ -1,0 +1,38 @@
+.container {
+  margin: auto;
+  padding: 0 20px;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    margin: 0 auto;
+    padding: 22px 40px;
+  }
+};
+
+.container--none {
+  padding: 0;
+  @media screen and (min-width: $tablet) {
+    padding: 0 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 0 40px;
+  }
+}
+
+.container--footer {
+  margin: auto;
+  padding: 20px;
+  @media screen and (min-width: $tablet) {
+    width: 222px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 317px;
+  }
+}

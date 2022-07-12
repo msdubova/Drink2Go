@@ -1,0 +1,103 @@
+.selector {
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  top: 40px;
+
+  display: none;
+  flex-direction: column;
+  width: 165px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: $tablet) {
+    width: 190px;
+  }
+}
+
+.options--opened {
+  display: flex;
+}
+
+.option--selected {
+  color: $color-base-white;
+
+  background-color: $color-base-primary;
+}
+
+.option--default {
+  width: 190px;
+
+  text-align: left;
+  color: $color-base-black;
+
+  border-top: 1px solid $color-base_secondary;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: black;
+
+    background: $color-base_secondary;
+  }
+
+  &:active {
+    color: $color-base-white;
+
+    background-color: $color-base_primary ;
+  }
+}
+
+.button--selector {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 165px;
+  padding: 0;
+  padding-right: 30px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: 0;
+
+  background: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+
+    width: 10px;
+    height: 10px;
+
+    background: url("../../img/selector.svg");
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-base_primary;
+
+    background-color: $color-base_secondary;
+  }
+
+  &:active {
+    background: transparent;
+    &::after {
+      background-image: ("../../img/selector-reverse.svg");
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: 175px;
+  }
+}

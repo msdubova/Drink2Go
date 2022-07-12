@@ -1,0 +1,25 @@
+// Colors-base
+
+$color-base-primary: #7859cf;
+$color-base-grey: #bdbdbd;
+$color-base-black: #333333;
+$color-base-white: #ffffff;
+$color-base-secondary: #f0ebff;
+
+
+// Colors-backgrounds
+$color-bg-flat-white: #f3ebe1;
+$color-bg-lightest-grey: #f8f8f8;
+$color-bg-lavender-latte: #eae6fc;
+$color-bg-espresso: #e5e6e8;
+
+// Alt Colors
+
+$color-alt-primary-lighter: #9070ec;
+$color-alt-primary-darker: #593cac;
+$color-alt-primary-lightgrey: #e2e2e2;
+
+// Color opacity
+
+$color-base-opacity: hwb(256 35% 19% / 0.251);
+$color-base-opacity-white: rgba(255, 255, 255,0.75);

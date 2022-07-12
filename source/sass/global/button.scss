@@ -1,0 +1,48 @@
+.button {
+  box-sizing: border-box;
+  min-width: 80px;
+  min-height: 36px;
+  padding: 8px 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: inherit;
+  text-align: center;
+  color: $color-base-white;
+  letter-spacing: 0;
+
+  background: $color-base-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  gap: 10px;
+
+  &:hover,
+  &:focus {
+    background: $color-alt-primary-lighter;
+  }
+
+  &:active {
+    background: $color-alt-primary-darker;
+  }
+
+  &:disabled {
+    background: $color-base-grey;
+
+    pointer-events: none;
+  }
+}
+
+.button--extra {
+  color: $color-base-primary;
+
+  background-color: $color-base-white;
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: $color-base-white;
+  }
+}
