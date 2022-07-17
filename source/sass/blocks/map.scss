@@ -1,0 +1,24 @@
+#map {
+  width: 100%;
+  height: 420px;
+
+  @media screen and (min-width: $tablet) {
+    height: 480px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 540px;
+  }
+}
+
+.map {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.map__image {
+  margin: auto;
+
+  background-color: $color-base-opacity ;
+}

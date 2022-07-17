@@ -1,0 +1,34 @@
+// Глобальные
+
+
+@import "global/fonts.scss";
+@import "global/colors.scss";
+@import "global/visually-hidden.scss";
+@import "global/scaffolding.scss";
+@import "global/mixins.scss";
+@import "global/variables.scss";
+@import "global/page.scss";
+@import "global/container.scss";
+@import "global/section.scss";
+@import "global/button.scss";
+@import "global/site-list.scss";
+
+
+// Блоки
+
+
+@import "blocks/slider.scss";
+@import "blocks/catalog.scss";
+@import "blocks/nav.scss";
+@import "blocks/header.scss";
+@import "blocks/user-list.scss";
+@import "blocks/features.scss";
+@import "blocks/pagination.scss";
+@import "blocks/filter.scss";
+@import "blocks/range.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/copyright.scss";
+@import "blocks/swiper.scss";
+@import "blocks/selector.scss";

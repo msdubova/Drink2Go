@@ -1,0 +1,145 @@
+.range {
+  padding-top: 6px;
+}
+
+.range__scale {
+  position: relative;
+
+  display: block;
+  width: inherit;
+  height: 2px;
+
+  background-color: $color-alt-primary-lightgrey;
+
+  &--selected {
+    width: 89%;
+    height: 4px;
+
+    background-color: $color-alt-primary-lighter;
+  }
+
+  .range__control {
+    position: absolute;
+    top: -10px;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: $color-base-white;
+    border: 2px solid $color-alt-primary-lighter;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--max {
+      left: calc(89% - 12px);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-alt-primary-lighter;
+      box-shadow: 0 0 0 2px $color-base-white inset;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+
+        width: 16px;
+        height: 16px;
+
+        background-color: $color-base-opacity-white;
+        border-radius: 50%;
+      }
+    }
+
+    &:active {
+      background-color: $color-base-primary;
+      &::after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+
+        width: 16px;
+        height: 16px;
+
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 50%;
+      }
+    }
+
+    &:disabled {
+      background-color: $color-base-white;
+      border: 2px solid $color-base-grey;
+
+      pointer-events: none;
+    }
+  }
+
+  input[type=range]:disabled {
+    pointer-events: none;
+  }
+
+  input[type=range]:disabled + .range__scale--selected {
+    background-color: $color-base-grey;
+  }
+}
+
+.range__limits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 35px 0 20px 0;
+}
+
+.range__input {
+  left: 155px;
+
+  width: 45%;
+  height: 40px;
+  padding: 8px, 10px, 8px, 10px;
+
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-base-black;
+
+  border: 2px solid $color-alt-primary-lighter;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
+  &::placeholder {
+    color: $color-base-grey;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $color-alt-primary-darker;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $color-alt-primary-lightgrey;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 96px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 134px;
+  }
+}
+
+.range__dash {
+  font-weight: 700;
+  color: $color-base-grey;
+}

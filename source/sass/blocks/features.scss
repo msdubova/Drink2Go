@@ -1,0 +1,131 @@
+.features {
+  @media screen and (min-width: $tablet) {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 75px;
+  }
+}
+
+.features__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 50px 0 0 0;
+  }
+}
+
+.feature__item {
+  position: relative;
+
+  margin-bottom: 15px;
+  padding-top: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 26px);
+
+    width: 52px;
+    height: 56px;
+  }
+
+  &--speed {
+    &::before {
+      background: url(../../img/icon-clock.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--convinience {
+    &::before {
+      background: url(../../img/icon-sheet.svg);
+    }
+  }
+
+  &--energy {
+    &::before {
+      background: url(../../img/icon-flash.svg);
+    }
+  }
+
+  &--eco {
+    &::before {
+      background: url(../../img/icon-leaf.svg);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 50px;
+    padding-top: 0;
+    padding-left: 75px;
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 320px;
+    margin-bottom: 20px;
+    padding-top: 75px;
+    padding-left: 0;
+    &::before {
+      left: calc(50% - 26px);
+    }
+  }
+}
+
+.feature__title {
+  margin-top: 32px;
+
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: center;
+  }
+}
+
+.feature__description {
+  width: 280px;
+  margin: 0 auto 0 auto ;
+  margin-top: 5px;
+
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    width: 267px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: auto;
+
+    text-align: center;
+  }
+}
