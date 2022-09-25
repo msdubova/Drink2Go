@@ -14,10 +14,16 @@ import del from 'del';
 import browser from 'browser-sync';
 import ghPages from 'gulp-gh-pages' ;
 
-gulp.task('deploy', function() {
+gulp.task('deploy', () => {
   return gulp.src('./build/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      branch: "master"
+    }));
 });
+// gulp.task('deploy', function() {
+//   return gulp.src('./build/**/*')
+//     .pipe(ghPages());
+// });
 
 // Styles
 
